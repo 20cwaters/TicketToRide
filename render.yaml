@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ticket-to-ride
+    runtime: node
+    plan: free
+    # --include=dev because the build needs vite/typescript even with NODE_ENV=production
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production

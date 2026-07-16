@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-950 text-parchment-50 antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  overscroll-behavior: none;
+}
+
+.font-display {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  letter-spacing: 0.04em;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm
+    font-semibold transition active:scale-[0.98] disabled:pointer-events-none
+    disabled:opacity-40 select-none;
+}
+
+.btn-primary {
+  @apply btn bg-rail-500 text-white shadow-card hover:bg-rail-600;
+}
+
+.btn-secondary {
+  @apply btn bg-ink-700 text-parchment-50 hover:bg-ink-600;
+}
+
+.btn-brass {
+  @apply btn bg-brass-500 text-ink-950 hover:bg-brass-400;
+}
+
+.input {
+  @apply w-full rounded-lg border border-ink-600 bg-ink-800 px-4 py-2.5 text-base
+    text-parchment-50 placeholder-ink-600 outline-none transition
+    focus:border-brass-400;
+}
+
+.panel {
+  @apply rounded-xl border border-ink-700 bg-ink-900 shadow-card;
+}
+
+/* Train-card colors */
+.card-red { background: linear-gradient(160deg, #e05747, #b03225); }
+.card-orange { background: linear-gradient(160deg, #f0913c, #c96a1a); }
+.card-yellow { background: linear-gradient(160deg, #eec83f, #c9a219); }
+.card-green { background: linear-gradient(160deg, #58a862, #35793f); }
+.card-blue { background: linear-gradient(160deg, #4e7fc1, #2f5a97); }
+.card-pink { background: linear-gradient(160deg, #d987b5, #b55a8d); }
+.card-black { background: linear-gradient(160deg, #4a4f57, #23262b); }
+.card-white { background: linear-gradient(160deg, #f4f1e8, #cfc9b8); }
+.card-locomotive {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 55%),
+    linear-gradient(160deg, #7c5cc4 0%, #4e7fc1 35%, #58a862 68%, #eec83f 100%);
+}
+
+.scrollbar-slim::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollbar-slim::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-ink-600;
+}
+
+@keyframes pulse-turn {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 106, 0.55); }
+  50% { box-shadow: 0 0 0 6px rgba(201, 168, 106, 0); }
+}
+.pulse-turn {
+  animation: pulse-turn 1.6s ease-in-out infinite;
+}

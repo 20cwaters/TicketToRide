@@ -1,0 +1,6 @@
+node_modules/
+dist/
+client/dist/
+scripts/board-preview.html
+*.log
+.DS_Store
