@@ -52,6 +52,12 @@ body {
   @apply rounded-xl border border-ink-700 bg-ink-900 shadow-card;
 }
 
+/* Translucent panel for screens with a decorative backdrop */
+.panel-glass {
+  @apply rounded-xl border border-ink-600/80 shadow-card backdrop-blur-md;
+  background: rgba(27, 35, 46, 0.86);
+}
+
 /* Train-card colors */
 .card-red { background: linear-gradient(160deg, #e05747, #b03225); }
 .card-orange { background: linear-gradient(160deg, #f0913c, #c96a1a); }
